@@ -167,12 +167,12 @@ export default {
     newHeaders.set('X-Forwarded-For', randIP);
     const cookie = request.headers.get('Cookie') || '';
     let cookies = cookie;
-    if (!cookie.includes('KievRPSSecAuth=')) {
-       cookies += '; KievRPSSecAuth=' + KievRPSSecAuth 
-    }
-    if (!cookie.includes('_RwBf=')) {
-      cookies += '; _RwBf=' + _RwBf
-    }
+    //if (!cookie.includes('KievRPSSecAuth=')) {
+      // cookies += '; KievRPSSecAuth=' + KievRPSSecAuth 
+    //}
+    //if (!cookie.includes('_RwBf=')) {
+     // cookies += '; _RwBf=' + _RwBf
+    //}
     newHeaders.set('Cookie', cookies);
     const oldUA = request.headers.get('user-agent');
     const isMobile = oldUA.includes('Mobile') || oldUA.includes('Android');
